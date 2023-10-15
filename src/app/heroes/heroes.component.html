@@ -1,0 +1,48 @@
+
+<!-- 2.1使用 *ngFor 列出这些英雄 -->
+<h2>My Heroes</h2>
+
+<ul class="heroes">
+<li *ngFor="let item of heroes">
+  <a routerLink="/detail/{{item.id}}">
+    <span class="badge">{{item.id}}</span>
+    <span class="name">{{item.name}}</span>
+  </a>
+<!--   <button [class.selected]="item === selectedHero" > -->
+  <!-- type="button" (click)="onSelect(item)"> -->
+<!--   </button> -->
+</li>
+</ul>
+<!-- <h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
+  </li>
+</ul> -->
+
+
+ <!-- 1.2 修改模板中的绑定，显示英雄信息 -->
+
+<!-- <h2>{{hero.name | uppercase}} Details</h2>
+<div><span>id:</span> {{hero.id}}</div>    -->
+
+
+<!-- 1.3 用户能在一个 <input> 输入框中编辑英雄的名字。
+当用户输入时，这个输入框能同时显示和修改英雄的 name 属性。
+让这种数据流动自动化，就要在表单元素 <input> 和组件的 hero.name 属性之间建立双向数据绑定 -->
+
+
+<!-- <div>
+    <label>Hero name:
+      <input [(ngModel)]="hero.name" placeholder="name">
+  </label> 
+  </div>  -->
+
+
+
+<!-- 3.1 input 模板会有一个接收值的接口 hero的接收入口 接收selected 用于展示name-->
+<!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->
+
+
